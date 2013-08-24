@@ -43,7 +43,7 @@ nav ul{list-style:none;text-align:center;margin-left:auto;margin-right:auto;widt
 nav li{display:inline-block;margin:0}
 nav .first{margin-left:-15%}
 nav li ul{display:none;position:absolute;background:#02131b;color:#ffc200;padding:0;margin:0;border-top:5px solid #ffc200;border-bottom:double 2px #ffc200;border-right:double 2px #ffc200;border-left:double 2px #ffc200;-moz-box-shadow:4px 5px 25px #000;-webkit-box-shadow:4px 5px 25px #000;box-shadow:4px 5px 25px #000}
-nav li:hover ul{display:list-item;text-align:center;width:auto}
+nav li:hover ul{display:list-item;text-align:center;width:auto;z-index:1000}
 nav li li{margin-top:0;font-size:14px;float:none;display:list-item;width:150px}
 nav a,nav a:visited{display:block;color:#232b2b;text-decoration:none;padding:.9em 1.2em .9em 1.2em}
 nav li li a,nav li li a:visited{color:#ffc200;padding:1em 1.2em;border-bottom:1px solid #ffc200}
@@ -57,8 +57,29 @@ nav li li:hover{border:0;-moz-transition:all .2s linear;-webkit-transition:all .
 nav li li a:hover{color:#232b2b;border-bottom:1px solid #ffc200;background:0;text-decoration:none}
 #banner{position:absolute;overflow:hidden;margin-left:2%;color:#ffc200;margin-top:0;z-index:2;height:100px;width:200px;background:#232b2b;border-bottom:2px double #ffc200;border-right:2px double #ffc200;border-left:2px double #ffc200;-moz-box-shadow:4px 5px 25px #000;-webkit-box-shadow:4px 5px 25px #000;box-shadow:4px 5px 25px #000;background:#081622}
 #banner img{width:100%;height:100%}
-#pics{z-index:-3;margin:0 0 50px 0;margin-left:auto;margin-right:auto;height:300px;width:70%;border:5px double #ffc200;overflow:hidden;-moz-box-shadow:4px 5px 25px #000;-webkit-box-shadow:4px 5px 25px #000;box-shadow:4px 5px 25px #000}
-#pics img{width:100%;height:100%}
+.carousel{position:relative;margin-bottom:20px;line-height:1;width:90%;border:2px solid #fcfcfc;border-radius:5px;width:80%;margin-left:auto;margin-right:auto;max-width:1200px}
+.carousel-inner{overflow:hidden;width:100%;position:relative}
+.carousel-inner>.item{display:none;position:relative;-webkit-transition:.6s ease-in-out left;-moz-transition:.6s ease-in-out left;-o-transition:.6s ease-in-out left;transition:.6s ease-in-out left}
+.carousel-inner>.item>img,.carousel-inner>.item>a>img{display:block;line-height:1;width:100%;height:350px}
+.carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev{display:block}
+.carousel-inner>.active{left:0}
+.carousel-inner>.next,.carousel-inner>.prev{position:absolute;top:0;width:100%}
+.carousel-inner>.next{left:100%}
+.carousel-inner>.prev{left:-100%}
+.carousel-inner>.next.left,.carousel-inner>.prev.right{left:0}
+.carousel-inner>.active.left{left:-100%}
+.carousel-inner>.active.right{left:100%}
+.carousel-control{position:absolute;top:50%;left:15px;width:40px;height:40px;margin-top:-20px;font-size:60px;font-weight:100;line-height:30px;color:#fff;text-align:center;background:#222;border:3px solid #fff;-webkit-border-radius:23px;-moz-border-radius:23px;border-radius:23px;opacity:.5;filter:alpha(opacity=50)}
+.carousel-control.right{left:auto;right:15px}
+.carousel-control:hover,.carousel-control:focus{color:#fff;text-decoration:none;opacity:.9;filter:alpha(opacity=90)}
+.carousel-indicators{position:absolute;top:15px;right:15px;z-index:5;margin:0;list-style:none}
+.carousel-indicators li{display:block;float:left;width:10px;height:10px;margin-left:5px;text-indent:-999px;background-color:#ccc;background-color:rgba(255,255,255,0.25);border-radius:5px}
+.carousel-indicators .active{background-color:#fff}
+.carousel-caption{position:absolute;left:0;right:0;bottom:0;padding:15px;background:#333;background:rgba(0,0,0,0.75)}
+.carousel-caption h4,.carousel-caption p{color:#fff;line-height:20px}
+.carousel-caption h4{margin:0 0 5px}
+.carousel-caption p{margin-bottom:0}
+@-ms-viewport{width:device-width}
 .text{max-width:960px;width:auto;display:block;margin-left:auto;margin-right:auto}
 .grid{margin:1.5em -15px;letter-spacing:-.31em;word-spacing:-.43em;text-rendering:optimizespeed;margin-left:auto;margin-right:auto;width:90%;background:rgba(100,178,238,0.1);border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;border:2px solid}
 .grid-cell{display:inline-block;vertical-align:top;width:45%;letter-spacing:normal;word-spacing:normal;text-align:left;text-rendering:auto;margin:2.5%;word-wrap:normal}

@@ -1,12 +1,23 @@
 
  <?php include 'header.php';?>
 <div id = "wrapper" class="clearfix">
-<div id="pics">
-		<img src="img/banner-1.jpg" alt="Skyline 1" >
-		<img src="img/banner-2.jpg" alt="Skyline 2">
-		<img src="img/banner-3.jpg" alt="Skyline 3">
-		<img src="img/banner-4.jpg" alt="Skyline 4">
-</div>
+ <div id="myCarousel" class="carousel">           
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+      <img src="img/banner-1.jpg" alt="" /></div>  
+    <div class="item">
+      <img src="img/banner-2.jpg" alt="" /></div> 
+    <div class="item">
+      <img src="img/banner-3.jpg" alt="" /></div> 
+    <div class="item">
+      <img src="img/banner-4.jpg" alt="" /></div> 
+  </div>  
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div><!-- end carousel -->
+
 <span class="other">
  StarWars themed HTML/CSS basic website with PHP/MySql backend to get you started. It's fairly responsive with social icons in a CSS sprite to reduce image lookups.
  A fully functional PHP/MySql contact form is also available with complete backend. 
@@ -38,8 +49,8 @@
 </div>
 <?php include 'footer.php'; ?> 
 
-  <script src="js/cycle.js"></script>
-  <script type="text/javascript">$('#pics').cycle('fade');</script>
+  <script src="js/carousel.js"></script>
+  <script type="text/javascript">$('.carousel').carousel({ interval: 2000 });</script>
   
 </body>
 </html>
