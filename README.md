@@ -1,4 +1,4 @@
-## website-starwars
+## Starwars-template
 ================
 
 StarWars Demo website for HTML/CSS template with PHP/MySql backend
