@@ -165,6 +165,16 @@ mixpanel.init("8a1df2cdec7a1bed9351e50f02a4165d");</script>
  
 <script src="js/carousel.js"></script>
 <script type="text/javascript">$('.carousel').carousel({ interval: 2000 });</script>
-  
+<script type="text/javascript">
+   $("#fork").click(function() {
+    mixpanel.track("View on GitHub clicked"); 
+});
+$("#tarball").click(function() {
+    mixpanel.track("Download TarBall clicked"); 
+});
+$("#zipball").click(function() {
+    mixpanel.track("Download ZipBall clicked"); 
+});
+</script>  
 </body>
 </html>
