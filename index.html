@@ -157,7 +157,7 @@ mixpanel.init("8a1df2cdec7a1bed9351e50f02a4165d");</script>
     
   <span class="author">
       <a class="sprite" href="http://dev.w3.org/html5/spec/Overview.html"><img src="img/transparent.png" /></a>
-      Copyright &copy; 2013 <a href="http://flanker.co.vu">FlankerWorks</a>
+      Copyright &copy; 2013 <a id="author" href="http://flanker.co.vu">FlankerWorks</a>
      </span>
 </div>     
 </footer><!-- End Footer -->
@@ -174,6 +174,9 @@ $("#tarball").click(function() {
 });
 $("#zipball").click(function() {
     mixpanel.track("Download ZipBall clicked"); 
+});
+$("#author").click(function() {
+    mixpanel.track("FlankerWorks clicked"); 
 });
 </script>  
 </body>
