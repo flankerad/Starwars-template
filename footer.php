@@ -45,7 +45,7 @@
 	  
 	<span class="author">
 	    <a class="sprite" href="http://dev.w3.org/html5/spec/Overview.html"><img src="img/transparent.png" /></a>
-	 		Copyright &copy; 2013 <a href="http://flanker.co.vu">FlankerWorks</a>
+	 		Copyright &copy; 2013 <a href="http://www.flankerworks.com">FlankerWorks</a>
 	   </span>
 </div>	   
 </footer><!-- End Footer -->
